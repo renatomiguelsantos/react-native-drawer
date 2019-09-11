@@ -153,6 +153,7 @@ export default class Drawer extends Component {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: 'rgba(113, 102, 80, 1)',
       },
     }
 
@@ -568,6 +569,9 @@ export default class Drawer extends Component {
         onLayout={this.handleSetViewport}
         style={this.stylesheet.container}
         >
+        <View style={{ position: 'absolute', top: 0, left: 0, width: this.state.viewport.width, height: this.state.viewport.height }}>
+          {this.props.extraElement}
+        </View>
         {first}
         {second}
       </View>
